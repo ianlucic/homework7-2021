@@ -50,6 +50,14 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 });
 
+document.querySelector("#slider").addEventListener("click", function() {
+	var val = document.querySelector("#slider").value;
+	video.volume = val/100;
+	volume.innerHTML = (val + "%");
+	console.log(video.volume);
+});
+
+
 document.querySelector("#vintage").addEventListener("click", function(){
 	console.log("Style: oldSchool");
 	video.classList.add("oldSchool");
